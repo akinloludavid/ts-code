@@ -38,13 +38,13 @@ export const getBookById = async (req: Request, res: Response) => {
 export const createBooks = async (req: Request, res: Response) => {
   try {
     const { title, author, sales } = req.body;
-
+    const idx = data.findIndex((el) => el.title === title);
     if (!title) {
       return res.status(400).json({
         error: "Title is required",
       });
     }
-    if (data.includes(title)) {
+    if (idx > -1) {
       return res.status(400).json({
         error: `${title} already exists in the database`,
       });
