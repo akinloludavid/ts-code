@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action = "/b/books" method="POST">
+      <label for="title">Book title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required> 
+      <label for="sales">Books sales:</label>
+      <input id="sales" name="sales" required>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

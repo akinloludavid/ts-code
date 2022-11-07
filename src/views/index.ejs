@@ -1,0 +1,26 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="blogs content">
+    <h2>All Books!!</h2>
+    <p><%- books[0].author %></p>
+  <%- title %>
+    <% if (books.length > 0) { %>
+      <% books.forEach(book => { %>
+        <a class = "single" href = "/b/books/<%- book.id %>" >
+        <h3 class="title"><%= book.title %></h3>
+        <p class="snippet"><%= book.author %></p>
+        </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no books to display...</p>
+    <% } %>
+    
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

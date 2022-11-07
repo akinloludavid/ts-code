@@ -1,0 +1,23 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+    <div class="update-book content">
+    <form action = "/update/1" method="PUT">
+      <label for="title">Book title:</label>
+      <input type="text" id="title" name="title" value="<%- book.title %>" required>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" value="<%- book.author %>" required> 
+      <label for="sales">Books sales:</label>
+      <input id="sales" name="sales" value="<%- book.sales %>" required>
+      <button>Submit</button>
+    </form>
+  </div>
+  <%- include("./partials/footer.ejs") %>
+
+
+  </body>
+
+  </html>
