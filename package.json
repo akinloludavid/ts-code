@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn tsc --build tsconfig.json",
-    "start": "node ./dist/app.js",
+    "start": "node ./app/dist/app.js",
     "test": "jest --watchAll"
   },
   "engines": {
