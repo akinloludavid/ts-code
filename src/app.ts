@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-app.set("views", path.resolve(__dirname, "../src/views"));
+app.set("views", path.resolve(__dirname, "./views"));
 
 app.use(express.urlencoded({ extended: false }));
 
