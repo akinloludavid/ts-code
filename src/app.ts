@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 
 app.use("/", bookPages);
 app.use("/b", bookRoutes);
-
-app.listen(8000, () => {
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
   console.log("listening on port 8000");
 });
